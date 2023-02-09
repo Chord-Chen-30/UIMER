@@ -5,4 +5,5 @@ log*/
 scripts*/
 __pycache__/
 bert-base-uncased/
+data/
 
