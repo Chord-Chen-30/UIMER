@@ -1,0 +1,8 @@
+snips_model/
+ckpt/
+ckpt*/
+log*/
+scripts*/
+__pycache__/
+bert-base-uncased/
+
