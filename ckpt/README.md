@@ -22,5 +22,5 @@ torch.save(model.state_dict(), PATH)
   - __slot-1shotinput12333.state_dict__ means a trained model on Slot Filling task in full resource setting. "input" means the method from [De Cao et al.](https://github.com/nicola-decao/diffmask) and there is another option "hidden". 12333 is a random seed.
 
 - For Natural Language Infernece task
-  - __66esnlibert.state_dict__ & __66esnliclassifier.state_dict__. There are 2 files for  Natural Language Infernece task: 1. trained bert parameters. 2. trained linear classifier parameters. 66 is a random seed.
+  - __66esnlibert.state_dict__ & __66esnliclassifier.state_dict__. There are 2 files for  Natural Language Infernece task: 1. trained bert parameters. 2. trained linear classifier parameters. 66 is a random seed. (Note that in this code base, "input" and "hidden" is not required to specified when loading this trained model because before training the extractor ( $\phi$ ) these two options do not have any effect on the parameters of the model ( $\theta$ )).
   
