@@ -254,12 +254,12 @@ class CrossEncoderExtractorForWNLI(CrossEncoderForWNLI):
         loss_task = ce_loss(logits, labels)
 
         if self.args.loss_func_rationale == 'L2norm':
-            loss_alignment = torch.norm((1-gates)-batch[-1], p=2)
+            loss_alignment = torch.norm((gates)-batch[-1], p=2)
 
         elif self.args.loss_func_rationale == 'BCE':
             bce_loss = torch.nn.BCELoss(reduction='none') # none because of padding element
             sigmoid = torch.nn.Sigmoid()
-            loss_alignment = bce_loss(sigmoid(1-gates), batch[-1].float())
+            loss_alignment = bce_loss(sigmoid(gates), batch[-1].float())
             loss_alignment = (loss_alignment*batch[1]).mean()
             
         elif self.args.loss_func_rationale == 'margin':
