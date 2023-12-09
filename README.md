@@ -111,11 +111,14 @@ python main_extractor.py --seed 55:1988:12333:42 \
 ```
 
 ## Citation
-@inproceedings{
-chen2023using,
-title={Using Interpretation Methods for Model Enhancement},
-author={Zhuo Chen and Chengyue Jiang and Kewei Tu},
-booktitle={The 2023 Conference on Empirical Methods in Natural Language Processing},
-year={2023},
-url={https://openreview.net/forum?id=xMudYCcBum}
+@inproceedings{ <br>
+chen2023using, <br>
+title={Using Interpretation Methods for Model Enhancement}, <br>
+author={Zhuo Chen and Chengyue Jiang and Kewei Tu}, <br>
+booktitle={The 2023 Conference on Empirical Methods in Natural Language Processing}, <br>
+year={2023}, <br>
+url={https://openreview.net/forum?id=xMudYCcBum} <br>
 }
+
+## Note 
+Please be careful of the version of your CUDA (should be compatible with torch). E.g., the code might not be able to run on some graphics card like A40.
