@@ -235,7 +235,7 @@ class TrainerExtractor(object):
                 best_dev_acc = results_dev[_metric]
                 best_test_acc = results_test[_metric]
                 self.save_model_online()
-                self.save_model_case_study()
+                # self.save_model_case_study()
                 early_stop = 0
             
             self.logger.acc_info("dev_acc", self.cur_seed, results_dev[_metric])

@@ -312,7 +312,7 @@ class Trainer(object):
                 print("Saving model online\n")
                 self.save_model_online()
                 early_stop = 0
-                self.save_model_case_study()
+                # self.save_model_case_study()
             
             self.logger.acc_info("dev_acc", self.cur_seed, results_dev[_metric])
             self.logger.acc_info("test_acc", self.cur_seed, results_test[_metric])

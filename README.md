@@ -38,32 +38,32 @@ _{task}$ discussed in Sec. 5.1.
 E.g. for method UIMER-IM on intent classification task in 5-shot setting over 4 random seeds.
 
 ```python
-python main.py --seed 55:1988:12333:42
-  --learning_rate 0.001 
-  --train_batch_size 24 
-  --task snips 
-  --model_type bert 
-  --model_dir snips_model 
-  --do_train
-  --do_eval
-  --use_crf 
-  --logging_step 1 
-  --log_path ./{LOG_PATH} 
-  --sub_task intent 
-  --shot 5 
-  --replace frequency 
-  --replace_repeat 2 
-  --weight 0.5 
-  --margin 1 
-  --warmup_epoch 0
-  --grad 0 
-  --grad_weight 0.0 
-  --feng none 
-  --feng_weight 0.0 
-  --lower_bound 1e-23 
-  --max_rationale_percentage 0.3 
-  --verbose 0 
-  --early_stop 10
+python main.py --seed 55:1988:12333:42 \
+  --learning_rate 0.001 \
+  --train_batch_size 24 \
+  --task snips \
+  --model_type bert \
+  --model_dir snips_model \
+  --do_train \
+  --do_eval \
+  --use_crf \
+  --logging_step 1 \
+  --log_path ./{LOG_PATH} \
+  --sub_task intent \
+  --shot 5 \
+  --replace frequency \
+  --replace_repeat 2 \
+  --weight 0.5 \
+  --margin 1 \
+  --warmup_epoch 0 \
+  --grad 0 \
+  --grad_weight 0.0 \
+  --feng none \
+  --feng_weight 0.0 \
+  --lower_bound 1e-23 \
+  --max_rationale_percentage 0.3 \
+  --verbose 0 \
+  --early_stop 10 \
   --case_study_dir ""
 ```
 
@@ -84,29 +84,38 @@ __important keyworks__
 E.g. for method UIMER-DM on slot filling task in 10-shot setting over 4 random seeds.
 
 ``` python
-python main_extractor.py --seed 55:1988:12333:42 
-  --learning_rate 0.0001 
-  --lr_extractor 0.0001 
-  --lr_decay 0.99 
-  --num_train_epochs 1 
-  --num_train_extractor_epochs 1 
-  --total_round 100 
-  --re_init_extractor 0 
-  --train_batch_size 24 
-  --task snips 
-  --model_type bert 
-  --do_train   
-  --use_crf   
-  --logging_step 1 
-  --log_path ./{LOG_PATH} 
-  --sub_task slot 
-  --shot 10 
-  --weight_extractor 10 
-  --gate input 
-  --loss_func_rationale margin 
-  --max_rationale_percentage 0.3 
-  --load_model 0
-  --verbose 0 
+python main_extractor.py --seed 55:1988:12333:42 \
+  --learning_rate 0.0001 \
+  --lr_extractor 0.0001 \
+  --lr_decay 0.99 \
+  --num_train_epochs 1 \
+  --num_train_extractor_epochs 1 \
+  --total_round 100 \
+  --re_init_extractor 0 \
+  --train_batch_size 24 \
+  --task snips \
+  --model_type bert \
+  --do_train \
+  --use_crf \
+  --logging_step 1 \
+  --log_path ./{LOG_PATH} \
+  --sub_task slot \
+  --shot 10 \
+  --weight_extractor 10 \
+  --gate input \
+  --loss_func_rationale margin \
+  --max_rationale_percentage 0.3 \
+  --load_model 0 \
+  --verbose 0 \
   --early_stop 10
 ```
 
+## Citation
+@inproceedings{
+chen2023using,
+title={Using Interpretation Methods for Model Enhancement},
+author={Zhuo Chen and Chengyue Jiang and Kewei Tu},
+booktitle={The 2023 Conference on Empirical Methods in Natural Language Processing},
+year={2023},
+url={https://openreview.net/forum?id=xMudYCcBum}
+}
