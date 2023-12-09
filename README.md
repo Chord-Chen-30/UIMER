@@ -15,11 +15,11 @@ pip install -r requirements.txt
 
 ### UIMER-IM
 
-__Importance keywords__
+__Importance args__
 
 - --sub_task: intent/slot
-- --replace: (Sec. 3.2.1, replace strategy) keyword mapping:
-    | Strategy | keyword |
+- --replace: (Sec. 3.2.1, replace strategy) args mapping:
+    | Strategy | args |
     |----|----|
     | BERT | bert |
     | Prior | frequency |
@@ -79,6 +79,7 @@ __important keyworks__
 - --re_init_extractor: Choose to re-initialize the extractor at the beginning of each round. Default to 0.
 - --weight_extractor: $\alpha$
 - --gate: input/hidden. Options used to train extractor($\phi$). Details in [De Cao et al., 2020](https://aclanthology.org/2020.emnlp-main.262.pdf).
+- --load_model: whether we have a well-trained model for training extractor first. Default to 0.
 
 E.g. for method UIMER-DM on slot filling task in 10-shot setting over 4 random seeds.
 
@@ -104,6 +105,7 @@ python main_extractor.py --seed 55:1988:12333:42
   --gate input 
   --loss_func_rationale margin 
   --max_rationale_percentage 0.3 
+  --load_model 0
   --verbose 0 
   --early_stop 10
 ```
