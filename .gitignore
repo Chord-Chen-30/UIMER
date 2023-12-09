@@ -3,6 +3,6 @@ log*/
 scripts*/
 __pycache__/
 bert-base-uncased/
-data/
+data
 
 *.state_dict
