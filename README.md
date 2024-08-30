@@ -111,14 +111,29 @@ python main_extractor.py --seed 55:1988:12333:42 \
 ```
 
 ## Citation
-@inproceedings{ <br>
-chen2023using, <br>
-title={Using Interpretation Methods for Model Enhancement}, <br>
-author={Zhuo Chen and Chengyue Jiang and Kewei Tu}, <br>
-booktitle={The 2023 Conference on Empirical Methods in Natural Language Processing}, <br>
-year={2023}, <br>
-url={https://openreview.net/forum?id=xMudYCcBum} <br>
+```bibtex
+@inproceedings{chen-etal-2023-using,
+    title = "Using Interpretation Methods for Model Enhancement",
+    author = "Chen, Zhuo  and
+      Jiang, Chengyue  and
+      Tu, Kewei",
+    editor = "Bouamor, Houda  and
+      Pino, Juan  and
+      Bali, Kalika",
+    booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+    month = dec,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.emnlp-main.28",
+    doi = "10.18653/v1/2023.emnlp-main.28",
+    pages = "424--438",
+    abstract = "In the age of neural natural language processing, there are plenty of works trying to derive interpretations of neural models. Intuitively, when gold rationales exist during training, one can additionally train the model to match its interpretation with the rationales. However, this intuitive idea has not been fully explored. In this paper, we propose a framework of utilizing interpretation methods and gold rationales to enhance models. Our framework is very general in the sense that it can incorporate various interpretation methods. Previously proposed gradient-based methods can be shown as an instance of our framework. We also propose two novel instances utilizing two other types of interpretation methods, erasure/replace-based and extractor-based methods, for model enhancement. We conduct comprehensive experiments on a variety of tasks. Experimental results show that our framework is effective especially in low-resource settings in enhancing models with various interpretation methods, and our two newly-proposed methods outperform gradient-based methods in most settings. Code is available at https://github.com/Chord-Chen-30/UIMER.",
 }
+```
+
+
+
 
 ## Note 
 Please be careful of the version of your CUDA (should be compatible with torch). E.g., the code might not be able to run on some graphics card like A40.
