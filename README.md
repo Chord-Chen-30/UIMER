@@ -1,5 +1,5 @@
 # Using Interpretation Methods for Model Enhancement (UIMER)
-Source code of the EMNLP2023 paper "Using Interpretation Methods for Model Enhancement", Zhuo Chen, Chengyue Jiang and Kewei Tu. Code implemented based on [JointBERT](https://github.com/monologg/JointBERT)
+> Source code of the EMNLP2023 paper "Using Interpretation Methods for Model Enhancement", Zhuo Chen, Chengyue Jiang and Kewei Tu. Code implemented based on [JointBERT](https://github.com/monologg/JointBERT)
 
 ![avatar](figs/frame.png)
 
